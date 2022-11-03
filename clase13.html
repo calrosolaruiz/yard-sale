@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        .title {
+            font-size: var(--lg);
+            font-weight: bold;
+            align-self: center;
+            margin-left: 16px;
+        }
+        .primary-button {
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-detail {
+            width: 360px;
+            padding: 24px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .my-order-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .order-summary {
+            background-color: var(--very-light-pink);
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            padding: 0 24px;
+            font-weight: bold;
+            font-size: var(--md);
+        }
+        .order-summary p:nth-child(2) {
+            text-align: end;
+        }
+        .cart {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto auto;
+            gap: 16px;
+            align-items: center;
+        }
+        .cart figure {
+            margin: 0;
+        }
+        .product-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .cart p:nth-child(2) {
+            color: var(--very-light-pink);
+        }
+        .cart p:nth-child(3) {
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .bar {
+            display: flex;
+            align-items: center;
+        }
+        .arrow {
+            transform: rotate(180deg);
+        }
+        @media (max-width: 640px) {
+            .product-detail {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="product-detail">
+        <div class="my-order-content">
+            <div class="bar">
+                <img src="./icons/flechita.svg" alt="Arrow" class="arrow">
+                <p class="title">Shopping cart</p>
+            </div>
+            <div class="cart">
+                <figure>
+                    <img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Bike" class="product-img">
+                </figure>
+                <p>Bike</p>
+                <p>$120.00</p>
+                <figure>
+                    <img src="./icons/icon_close.png" alt="remove">
+                </figure>
+            </div>
+            
+            <div class="order-summary">
+                <p>
+                    <span>Total</span>
+                </p>
+                <p>$720.00</p>
+            </div>
+
+        </div>
+        <button class="primary-button">Checkout
+        </button>
+    </aside>
+</body>
+</html>
